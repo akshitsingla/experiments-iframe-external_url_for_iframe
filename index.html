@@ -17,13 +17,13 @@
     </head>
     <body>
 
-        <button onclick="msgToParent();">Click Here!</button>
+        <button onclick="msgToParent();">Message to parent!</button>
 
         <script type="text/javascript">
 
             /* RECEIVING MSG WITHIN IFRAME */
             function listener(event) {
-                alert ("alert in sub-index. Message = : " + event.data);
+                alert ("alert in iframe (ext-URL). Message = : " + event.data);
             }
 
             if (window.addEventListener){       
@@ -34,7 +34,7 @@
 
             /* SENDING A MESSAGE FROM IFRAME */
             function msgToParent() {
-                parent.postMessage("msg from sub-index","*");
+                parent.postMessage("msg_from_iframe_ext_url","*");
             }
         </script>
 
